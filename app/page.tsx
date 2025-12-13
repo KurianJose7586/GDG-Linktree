@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Instagram, Linkedin, MessageCircle, Globe, MessageSquare } from "lucide-react"
+// FIX: Added 'Calendar' to the import list below
+import { Instagram, Linkedin, MessageCircle, Globe, MessageSquare, Calendar } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export default function Home() {
@@ -10,7 +11,6 @@ export default function Home() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  // </CHANGE>
 
   const links = [
     {
@@ -23,22 +23,30 @@ export default function Home() {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "Connect with us LinkedIn",
-      href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/posts/?feedView=all",
+      href: "https://linkedin.com/company/gdg-galgotias-university",
       bgColor: "bg-[#0A66C2]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       label: "Join our WhatsApp Community",
-      href: "https://chat.whatsapp.com/HVsWFjRedU0IlbYBwY8IQS",
+      href: "https://whatsapp.com/channel/gdggalgotias",
       bgColor: "bg-[#25D366]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
       icon: <Instagram className="w-6 h-6" />,
       label: "Follow us on Instagram",
-      href: "https://www.instagram.com/gdgocgu?igsh=NTViYzh2MTlnaDM=",
+      href: "https://instagram.com/gdggalgotias",
       bgColor: "bg-[#E4405F]",
+      hoverScale: "hover:scale-[1.03]",
+    },
+    // New Commudle Button
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      label: "Register for Events on Commudle",
+      href: "https://www.commudle.com/communities/gdg-galgotias-university",
+      bgColor: "bg-[#6366f1]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
@@ -75,7 +83,6 @@ export default function Home() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        {/* </CHANGE> */}
         <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border-2 border-gray-900 p-8 md:p-12">
           {/* Header */}
           <div className="flex flex-col items-center text-center mb-10">
@@ -88,12 +95,11 @@ export default function Home() {
                 className="w-auto h-16"
               />
             </div>
-            {/* </CHANGE> */}
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 text-balance">
-    On Campus Galgotias University
-  </h1>
+              On Campus Galgotias University
+            </h1>
             <p className="text-sm md:text-base text-gray-700 max-w-xl text-balance leading-relaxed">
-              The Tech Club You actually Want to Join! Join GDG on Campus Galgotias University to connect, learn, and grow with.
+              The Tech Community You actually Want to Join!<br></br> Join GDG on Campus Galgotias University to connect, learn, and grow with.
             </p>
           </div>
 
@@ -105,7 +111,6 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 active:border-gray-950 group`}
-                // </CHANGE>
               >
                 <div className="flex-shrink-0 text-white group-hover:scale-110 transition-transform">{link.icon}</div>
                 <span className="text-base font-semibold text-white text-left">{link.label}</span>
@@ -116,7 +121,7 @@ export default function Home() {
           {/* Footer */}
           <div className="text-center pt-6 border-t-2 border-gray-900">
             <p className="text-xs text-gray-500">
-              © 2025 Google Developer Groups On Campus GU | Maintained by the cool kids of GDG GU
+              © 2025 Google Developers Group on Campus GU | Maintained by the cool kids of GDG GU
             </p>
           </div>
         </div>
