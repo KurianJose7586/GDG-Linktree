@@ -23,21 +23,21 @@ export default function Home() {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "Connect with us LinkedIn",
-      href: "https://linkedin.com/company/gdg-galgotias-university",
+      href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/posts/?feedView=all",
       bgColor: "bg-[#0A66C2]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       label: "Join our WhatsApp Community",
-      href: "https://whatsapp.com/channel/gdggalgotias",
+      href: "https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FHVsWFjRedU0IlbYBwY8IQS%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnG7oy3iz1VdAEOBwzMWLW8cHNdjAddJYRNDW-7LshViUDqtn2HAZSFSuZGOU_aem_sINQeIBDbHQ_g9_YFh6TbQ&e=AT1QFXp_Ypv6CxOeXtBvFsMzpPvyzGhAHJVjn0-ytkvQ4zFZuOHF4J21MQdDpkNmm9gqd0oa97QtrhyPqDXgOFY0JMEuyPttlzDawMu_Ci-ryZUDgUUFVr8x7g",
       bgColor: "bg-[#25D366]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
       icon: <Instagram className="w-6 h-6" />,
       label: "Follow us on Instagram",
-      href: "https://instagram.com/gdggalgotias",
+      href: "https://www.instagram.com/gdgocgu/",
       bgColor: "bg-[#E4405F]",
       hoverScale: "hover:scale-[1.03]",
     },
@@ -45,7 +45,7 @@ export default function Home() {
     {
       icon: <Calendar className="w-6 h-6" />,
       label: "Register for Events on Commudle",
-      href: "https://www.commudle.com/communities/gdg-galgotias-university",
+      href: "https://www.commudle.com/communities/dsc-galgotias-university",
       bgColor: "bg-[#6366f1]",
       hoverScale: "hover:scale-[1.03]",
     },
