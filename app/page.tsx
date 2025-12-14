@@ -23,14 +23,14 @@ export default function Home() {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "Connect with us LinkedIn",
-      href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/posts/?feedView=all",
+      href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/",
       bgColor: "bg-[#0A66C2]",
       hoverScale: "hover:scale-[1.03]",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       label: "Join our WhatsApp Community",
-      href: "https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FHVsWFjRedU0IlbYBwY8IQS%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnG7oy3iz1VdAEOBwzMWLW8cHNdjAddJYRNDW-7LshViUDqtn2HAZSFSuZGOU_aem_sINQeIBDbHQ_g9_YFh6TbQ&e=AT1QFXp_Ypv6CxOeXtBvFsMzpPvyzGhAHJVjn0-ytkvQ4zFZuOHF4J21MQdDpkNmm9gqd0oa97QtrhyPqDXgOFY0JMEuyPttlzDawMu_Ci-ryZUDgUUFVr8x7g",
+      href: "https://chat.whatsapp.com/HVsWFjRedU0IlbYBwY8IQS",
       bgColor: "bg-[#25D366]",
       hoverScale: "hover:scale-[1.03]",
     },
@@ -41,7 +41,6 @@ export default function Home() {
       bgColor: "bg-[#E4405F]",
       hoverScale: "hover:scale-[1.03]",
     },
-    // New Commudle Button
     {
       icon: <Calendar className="w-6 h-6" />,
       label: "Register for Events on Commudle",
