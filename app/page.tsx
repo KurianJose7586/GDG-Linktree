@@ -26,7 +26,7 @@ export default function Home() {
     {
       icon: <MessageCircle className="w-6 h-6" />,
       label: "Join our Discord Server",
-      href: "https://discord.gg/gdggalgotias",
+      href: "https://discord.gg/HuddcRSw4",
       bgColor: "bg-[#5865F2]",
       hoverScale: "hover:scale-[1.03]",
     },
