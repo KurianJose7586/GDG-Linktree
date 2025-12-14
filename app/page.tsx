@@ -1,7 +1,16 @@
 "use client"
 
 import Image from "next/image"
-import { Instagram, Linkedin, MessageCircle, Globe, MessageSquare, Calendar } from "lucide-react"
+// 1. Import Lucide for generic UI icons (Calendar)
+import { Calendar } from "lucide-react"
+// 2. Import Simple Icons for Brands (Discord, Chrome, etc.)
+import { 
+  SiDiscord, 
+  SiLinkedin, 
+  SiWhatsapp, 
+  SiInstagram, 
+  SiGooglechrome 
+} from "react-icons/si"
 import { useEffect, useState } from "react"
 import { 
   Dialog, 
@@ -24,45 +33,45 @@ export default function Home() {
 
   const links = [
     {
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <SiDiscord className="w-6 h-6" />, // Official Discord Logo
       label: "Join our Discord Server",
       href: "https://discord.gg/HuddcRSw4",
-      bgColor: "bg-[#5865F2]",
+      bgColor: "bg-[#5865F2]", // Discord Blurple
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <Linkedin className="w-6 h-6" />,
-      label: "Connect with us LinkedIn",
+      icon: <SiLinkedin className="w-6 h-6" />, // Official LinkedIn Logo
+      label: "Connect with us on LinkedIn",
       href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/",
-      bgColor: "bg-[#0A66C2]",
+      bgColor: "bg-[#0A66C2]", // LinkedIn Blue
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
+      icon: <SiWhatsapp className="w-6 h-6" />, // Official WhatsApp Logo
       label: "Join our WhatsApp Community",
       href: "https://chat.whatsapp.com/HVsWFjRedU0IlbYBwY8IQS",
-      bgColor: "bg-[#25D366]",
+      bgColor: "bg-[#25D366]", // WhatsApp Green
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <Instagram className="w-6 h-6" />,
+      icon: <SiInstagram className="w-6 h-6" />, // Official Instagram Logo
       label: "Follow us on Instagram",
       href: "https://www.instagram.com/gdgocgu/",
-      bgColor: "bg-[#E4405F]",
+      bgColor: "bg-[#E4405F]", // Instagram Pink/Red
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
+      icon: <Calendar className="w-6 h-6" />, // Generic Calendar for Events
       label: "Register for Events on Commudle",
       href: "https://www.commudle.com/communities/dsc-galgotias-university",
-      bgColor: "bg-[#6366f1]",
+      bgColor: "bg-[#6366f1]", // Commudle Indigo
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <SiGooglechrome className="w-6 h-6" />, // Chrome Icon for Website
       label: "Official Website (Coming Soon!)",
       href: "#",
-      bgColor: "bg-gray-600",
+      bgColor: "bg-gray-600", // Neutral Gray
       hoverScale: "hover:scale-[1.03]",
     },
   ]
@@ -133,7 +142,7 @@ export default function Home() {
                 return (
                   <Dialog key={index}>
                     <DialogTrigger asChild>
-                      {/* FIX: We pass the div directly (via asChild) to avoid 'button > div' nesting errors */}
+                      {/* Using the div directly as the trigger to avoid button nesting issues */}
                       {cardContent}
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-md border-2 border-gray-900 rounded-2xl">
