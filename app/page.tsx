@@ -1,9 +1,19 @@
 "use client"
 
 import Image from "next/image"
-// FIX: Added 'Calendar' to the import list below
 import { Instagram, Linkedin, MessageCircle, Globe, MessageSquare, Calendar } from "lucide-react"
 import { useEffect, useState } from "react"
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription, 
+  DialogTrigger, 
+  DialogFooter, 
+  DialogClose 
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -98,23 +108,66 @@ export default function Home() {
               On Campus Galgotias University
             </h1>
             <p className="text-sm md:text-base text-gray-700 max-w-xl text-balance leading-relaxed">
-              The Tech Community You actually Want to Join!<br></br> Join GDG on Campus Galgotias University to connect, learn, and grow with.
+              The Tech Community You actually Want to Join!<br /> 
+              Join GDG on Campus Galgotias University to connect, learn, and grow with.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 active:border-gray-950 group`}
-              >
-                <div className="flex-shrink-0 text-white group-hover:scale-110 transition-transform">{link.icon}</div>
-                <span className="text-base font-semibold text-white text-left">{link.label}</span>
-              </a>
-            ))}
+            {links.map((link, index) => {
+              const isWebsite = link.label.includes("Official Website");
+
+              // Define the card content separately
+              const cardContent = (
+                <div className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 active:border-gray-950 group cursor-pointer w-full h-full`}>
+                  <div className="flex-shrink-0 text-white group-hover:scale-110 transition-transform">
+                    {link.icon}
+                  </div>
+                  <span className="text-base font-semibold text-white text-left">
+                    {link.label}
+                  </span>
+                </div>
+              );
+
+              if (isWebsite) {
+                return (
+                  <Dialog key={index}>
+                    <DialogTrigger asChild>
+                      {/* FIX: We pass the div directly (via asChild) to avoid 'button > div' nesting errors */}
+                      {cardContent}
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-md border-2 border-gray-900 rounded-2xl">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">Classified Project 🚀</DialogTitle>
+                        <DialogDescription className="text-base text-gray-600 pt-2">
+                          You've stumbled upon something big. We're building a new digital home for Galgotias' developers. Access granted soon.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <DialogFooter className="sm:justify-end">
+                        <DialogClose asChild>
+                          <Button type="button" className="bg-gray-900 text-white hover:bg-gray-800">
+                            Roger that
+                          </Button>
+                        </DialogClose>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+                );
+              }
+
+              // Standard Link
+              return (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  {cardContent}
+                </a>
+              );
+            })}
           </div>
 
           {/* Footer */}
