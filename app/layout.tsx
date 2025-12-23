@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "GDG on Campus - Galgotias University",
+  title: "Gdg On Campus GU Social Links",
   description:
     "Empowering student developers at Galgotias University. Join our community of learners, innovators, and builders!",
   generator: "KurianThegr8",

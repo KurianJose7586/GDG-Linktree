@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-// 1. Import Lucide for generic UI icons (Calendar)
-import { Calendar } from "lucide-react"
-// 2. Import Simple Icons for Brands (Discord, Chrome, etc.)
+// 1. Import Lucide for generic UI icons
+import { Calendar, Rocket } from "lucide-react" // Added Rocket here
+// 2. Import Simple Icons for Brands
 import { 
   SiDiscord, 
   SiLinkedin, 
@@ -33,45 +33,69 @@ export default function Home() {
 
   const links = [
     {
-      icon: <SiDiscord className="w-6 h-6" />, // Official Discord Logo
-      label: "Join our Discord Server",
-      href: "https://discord.gg/HuddcRSw4",
-      bgColor: "bg-[#5865F2]", // Discord Blurple
+      // UPDATE: Using the local SVG logo instead of a generic icon
+      icon: (
+        <Image 
+          src="/icon.svg" 
+          alt="GDG Logo" 
+          width={24} 
+          height={24} 
+          className="w-6 h-6" 
+        />
+      ),
+      label: "Visit our GDG Chapter Page",
+      href: "https://gdg.community.dev/gdg-on-campus-galgotias-university-greater-noida-india/",
+      bgColor: "bg-[#4285F4]", // Google Blue
+      hoverScale: "hover:scale-[1.03]",
+    },
+    // NEW HACKATHON LINK ADDED HERE
+    {
+      icon: <Rocket className="w-6 h-6" />, 
+      label: "Techsprint '25: Build. Ship. Win.",
+      href: "#", // <--- PASTE YOUR REGISTRATION LINK HERE
+      bgColor: "bg-orange-600", // distinct orange to signal an "Event"
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <SiLinkedin className="w-6 h-6" />, // Official LinkedIn Logo
+      icon: <SiDiscord className="w-6 h-6" />, 
+      label: "Join our Discord Server",
+      href: "https://discord.gg/gdggalgotias",
+      bgColor: "bg-[#5865F2]", 
+      hoverScale: "hover:scale-[1.03]",
+    },
+    {
+      icon: <SiLinkedin className="w-6 h-6" />, 
       label: "Connect with us on LinkedIn",
       href: "https://www.linkedin.com/company/gdg-on-campus-galgotias-university/",
-      bgColor: "bg-[#0A66C2]", // LinkedIn Blue
+      bgColor: "bg-[#0A66C2]", 
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <SiWhatsapp className="w-6 h-6" />, // Official WhatsApp Logo
+      icon: <SiWhatsapp className="w-6 h-6" />, 
       label: "Join our WhatsApp Community",
       href: "https://chat.whatsapp.com/HVsWFjRedU0IlbYBwY8IQS",
-      bgColor: "bg-[#25D366]", // WhatsApp Green
+      bgColor: "bg-[#25D366]", 
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <SiInstagram className="w-6 h-6" />, // Official Instagram Logo
+      icon: <SiInstagram className="w-6 h-6" />, 
       label: "Follow us on Instagram",
       href: "https://www.instagram.com/gdgocgu/",
-      bgColor: "bg-[#E4405F]", // Instagram Pink/Red
+      bgColor: "bg-[#E4405F]", 
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <Calendar className="w-6 h-6" />, // Generic Calendar for Events
+      icon: <Calendar className="w-6 h-6" />, 
       label: "Register for Events on Commudle",
       href: "https://www.commudle.com/communities/dsc-galgotias-university",
-      bgColor: "bg-[#6366f1]", // Commudle Indigo
+      bgColor: "bg-[#6366f1]", 
       hoverScale: "hover:scale-[1.03]",
     },
     {
-      icon: <SiGooglechrome className="w-6 h-6" />, // Chrome Icon for Website
+      icon: <SiGooglechrome className="w-6 h-6" />, 
       label: "Official Website (Coming Soon!)",
       href: "#",
-      bgColor: "bg-gray-600", // Neutral Gray
+      bgColor: "bg-gray-600", 
       hoverScale: "hover:scale-[1.03]",
     },
   ]
