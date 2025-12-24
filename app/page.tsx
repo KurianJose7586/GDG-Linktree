@@ -52,8 +52,8 @@ export default function Home() {
     {
       icon: <Rocket className="w-6 h-6" />, 
       label: "Techsprint '25: Build. Ship. Win.",
-      href: "#", // <--- PASTE YOUR REGISTRATION LINK HERE
-      bgColor: "bg-orange-600", // distinct orange to signal an "Event"
+      href: "https://vision.hack2skill.com/event/gdgoc-25-gu-techsprint-hackathon", 
+      bgColor: "bg-orange-600", 
       hoverScale: "hover:scale-[1.03]",
     },
     {
