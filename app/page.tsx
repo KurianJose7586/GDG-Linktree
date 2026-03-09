@@ -51,8 +51,8 @@ export default function Home() {
     // NEW HACKATHON LINK ADDED HERE
     {
       icon: <Rocket className="w-6 h-6" />, 
-      label: "Techsprint '25: Build. Ship. Win.",
-      href: "https://vision.hack2skill.com/event/gdgoc-25-gu-techsprint-hackathon", 
+      label: "Solution Challenge 2026",
+      href: "https://promptwars.in/solutionchallenge2026.html", 
       bgColor: "bg-orange-600", 
       hoverScale: "hover:scale-[1.03]",
     },
