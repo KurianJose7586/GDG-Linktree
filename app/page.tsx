@@ -152,7 +152,7 @@ export default function Home() {
 
               // Define the card content separately
               const cardContent = (
-                <div className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 shadow-lg group ${link.hoverScale}`}>
+                <div className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 shadow-lg group ${link.hoverScale} w-full h-full min-h-[72px]`}>
                   <div className="flex-shrink-0 text-white group-hover:scale-110 transition-transform">
                     {link.icon}
                   </div>
