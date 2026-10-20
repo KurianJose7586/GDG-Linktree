@@ -80,7 +80,7 @@ export default function Home() {
     {
       icon: <SiInstagram className="w-6 h-6" />, 
       label: "Follow us on Instagram",
-      href: "https://www.instagram.com/gdgocgu/",
+      href: "https://www.instagram.com/gdgoc_gu/",
       bgColor: "bg-[#E4405F]", 
       hoverScale: "hover:scale-[1.03]",
     },
@@ -152,7 +152,7 @@ export default function Home() {
 
               // Define the card content separately
               const cardContent = (
-                <div className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 active:border-gray-950 group cursor-pointer w-full h-full`}>
+                <div className={`${link.bgColor} rounded-2xl p-5 flex items-center gap-4 transition-all duration-150 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97] active:shadow-md border-2 border-gray-900 shadow-lg group ${link.hoverScale}`}>
                   <div className="flex-shrink-0 text-white group-hover:scale-110 transition-transform">
                     {link.icon}
                   </div>
